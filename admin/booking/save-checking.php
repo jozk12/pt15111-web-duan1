@@ -14,7 +14,7 @@ if(!$book){
     die;
 }
 $subject ="";
-if($check_in==1){
+if($check_in==2){
     $subject = "Đơn đặt của bạn không được chấp nhận";
 }else{
     $subject = "Đơn đặt của bạn đã được chấp nhận";
