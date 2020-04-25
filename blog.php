@@ -92,7 +92,7 @@ $blogRec = queryExecute($getBlogRecentQuery, true);
                                         <h2><a href="blog-single.php"><?= $blog['title'] ?></a></h2>
                                         <h5>BY <a href="#"><?= $blog['author'] ?></a> <i class="fa fa-clock-o"></i><?= $blog['create_at'] ?><i class="fa fa-bars"></i>
                                             <?php foreach ($blog['blog_cate'] as $bCate) : ?>
-                                                <a href="blog.php?<?= $bCate['name'] ?>"><?= $bCate['name'] ?>&nbsp &nbsp</a>
+                                                <a href="blog.php"><?= $bCate['name'] ?>&nbsp &nbsp</a>
                                             <?php endforeach ?>
                                         </h5>
                                         <p><?= $blog['short_ct'] ?></p>
