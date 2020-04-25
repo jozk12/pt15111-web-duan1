@@ -21,7 +21,7 @@ $rooms = queryExecute($getRooms, true);
 $getRoomServices = "select * from room_services where status = 1";
 $roomServices = queryExecute($getRoomServices, true);
 
-$getRoomGalleries = "select * from room_galleries";
+$getRoomGalleries = "select * from room_galleries where status = 1";
 $roomGalleries = queryExecute($getRoomGalleries, true);
 
 $getGalleries = "select * from galleries where status = 1";
@@ -33,10 +33,10 @@ $customerFeedback = queryExecute($getCustomerFeedback, true);
 $getContacts = "select * from contacts where reply_by IS NULL";
 $contacts = queryExecute($getContacts, true);
 
-$getBooking = "select * from booking";
+$getBooking = "select * from booking where check_in = 1";
 $booking = queryExecute($getBooking, true);
 
-$getBlog = "select * from blog";
+$getBlog = "select * from blog where status = 1";
 $blog = queryExecute($getBlog, true);
 
 $getBlogCate = "select * from blog_categories where status = 1";

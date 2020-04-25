@@ -46,6 +46,7 @@ $galleries = queryExecute($getGalleries, true);
                                     <thead>
                                         <tr>
                                             <th>Ảnh</th>
+                                            <th>Trạng thái</th>
                                             <th><a href="<?= ADMIN_URL . 'galleries/add-form.php' ?>" class="btn btn-primary btn-m"><i class="fa fa-plus"></i> Thêm</a>
                                         </tr>
                                     </thead>

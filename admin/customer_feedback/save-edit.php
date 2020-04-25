@@ -58,6 +58,6 @@ $updateFbQuery = "update customer_feedback
                                 status='$status'
                             where id = $id";
 queryExecute($updateFbQuery, false);
-header('location:'.ADMIN_URL .'customer_feedback?msg=Chỉnh sửa Slide thành công!');
+header('location:'.ADMIN_URL .'customer_feedback?msg=Chỉnh sửa phản hồi thành công!');
 die;
 ?>
