@@ -127,7 +127,7 @@ $webSetting = queryExecute($getWebSettingQuery, false);
                                         <a href="rooms-detail.php?id=<?= $room['id'] ?>" data-background="<?= BASE_URL . $room['image'] ?>"></a>
                                     </div>
                                     <div class="item-desc">
-                                        <h2><a href="rooms-detail.php"><?= $room['name'] ?></a></h2>
+                                        <h2><a href="rooms-detail.php?id=<?= $room['id'] ?>"><?= $room['name'] ?></a></h2>
                                         <h3><?= $room['price'] ?> VNĐ</h3>
                                         <p><?= $room['short_desc'] ?></p>
                                     </div>
@@ -241,7 +241,7 @@ $webSetting = queryExecute($getWebSettingQuery, false);
                                     </div>
                                 </div>
                                 <div class="item-desc">
-                                    <h3><a href="blog-single.php"><?= $blog['title'] ?></a></h3>
+                                    <h3><a href="blog-single.php?id=<?= $blog['id'] ?>"><?= $blog['title'] ?></a></h3>
                                     <p><?= $blog['short_ct'] ?></p>
                                     <a href="blog-single.php?id=<?= $blog['id'] ?>" class="btn-link">READ MORE</a>
                                 </div>
