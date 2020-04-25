@@ -2,7 +2,6 @@
 session_start();
 require_once "./config/utils.php";
 $keyword = isset($_GET['keyword']) == true ? $_GET['keyword'] : "";
-$cateName = isset($_GET['cate']) ? $_GET['cate']:"";
 
 $getWebSettingQuery = "select * from web_settings where status = 1";
 $webSetting = queryExecute($getWebSettingQuery, false);
