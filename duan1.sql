@@ -11,7 +11,7 @@
  Target Server Version : 100408
  File Encoding         : 65001
 
- Date: 22/04/2020 18:19:38
+ Date: 25/04/2020 15:45:07
 */
 
 SET NAMES utf8mb4;
@@ -33,7 +33,7 @@ CREATE TABLE `blog`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `blog_author`(`author_id`) USING BTREE,
   CONSTRAINT `blog_author` FOREIGN KEY (`author_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of blog
@@ -46,10 +46,9 @@ INSERT INTO `blog` VALUES (5, 'Best Things to Do In London Enjoy the Nightlife 1
 INSERT INTO `blog` VALUES (6, 'Best Things to Do In London Enjoy the Nightlife 2', 'public/images/photo-services-5-1.jpg', 'Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper leo eu aliquet ultricies. Proin sit amet porta lorem, nec bibendum augue. Phasellus vehicula augue eu bibendum varius. Fusce egestas urna ac ullamcorper pulvinar. Mauris a mauris accumsan felis auctor ultrices. Maecenas eu vehicula dolor. Nullam ac facilisis mi. Praesent efficitur rutrum accumsan. Vivamus aliquet eros vel suscipit pretium.\r\n\r\nEtiam congue mollis mi a mollis. Fusce quam enim, posuere et nibh nec, facilisis tempus odio. In blandit lectus dignissim ipsum suscipit, hendrerit hendrerit turpis accumsan. Aliquam auctor orci erat, vitae vehicula tellus dapibus sed. Mauris bibendum diam in ex dignissim, id cursus neque venenatis. Donec at libero vulputate, maximus mauris vel, maximus sem. Pellentesque dapibus pulvinar augue aliquam dictum. Morbi sit amet elementum ipsum. Cras venenatis turpis ac efficitur mattis. Proin venenatis euismod massa, vitae gravida mauris mattis ut. In placerat tristique nulla, sed commodo magna cursus ut. Nullam scelerisque imperdiet magna in dignissim. Vivamus vitae odio nec ipsum pellentesque dapibus at sed augue. Fusce vel luctus risus, non viverra sem. Nullam sit amet massa enim.\r\n\r\nProin aliquam consectetur mi id vehicula. Nam cursus mauris lorem, ac mollis tortor ultricies a. Nam pulvinar nulla tellus, volutpat dignissim dui elementum mollis. Donec feugiat mi eu porta dignissim. Proin scelerisque nulla ex, sit amet fringilla nunc vulputate vel. Pellentesque sit amet vestibulum odio, in elementum risus. Duis ut mi sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut efficitur ante eu sem hendrerit facilisis. Aliquam non efficitur nulla. Curabitur ante felis, tincidunt a libero ac, mollis accumsan enim. Morbi hendrerit semper nunc, eget aliquam leo feugiat sed.', 2, '2020-03-27 22:12:09', 1);
 INSERT INTO `blog` VALUES (9, 'Best Things to Do In London Enjoy the Sunlife', 'public/images/5e985b2ac3f80-5e92db690ca41-photo-blog-big-2.jpg', 'agabds', 'agadfgads', 1, '2020-04-17 20:55:39', 1);
 INSERT INTO `blog` VALUES (14, 'Touch The Sea 2', 'public/images/5e9a4a782d687-5e986e9059ace-photo-gallery-1.jpg', 'fafsdsdf', 'ầgadfg', 1, NULL, 1);
-INSERT INTO `blog` VALUES (15, 'td1', 'public/images/5e9c17f8b2032-5e9a4a782d687-5e986e9059ace-photo-gallery-1.jpg', 'ababacbasdfsdagasdbadad', 'ababababababababababab', 1, NULL, 1);
-INSERT INTO `blog` VALUES (16, 'td2', 'public/images/5e9c17f8b2032-5e9a4a782d687-5e986e9059ace-photo-gallery-1.jpg', 'ababacbasdfsdagasdbadad', 'ababababababababababab', 1, '2020-04-19 16:28:10', 1);
 INSERT INTO `blog` VALUES (17, 'td3', 'public/images/5e9c17f8b2032-5e9a4a782d687-5e986e9059ace-photo-gallery-1.jpg', NULL, NULL, NULL, '2020-04-19 16:28:20', 1);
 INSERT INTO `blog` VALUES (18, 'ầddgs', 'public/images/5e9c1b9058f06-5e9a47a34385f-5e97d8da09091-5e928c78c2c89-about.jpg', 'adsafa', 'fasdsad', 1, '2020-04-19 16:36:16', 1);
+INSERT INTO `blog` VALUES (22, 'Best Things to Do In NewYork Enjoy the Sunlife', 'public/images/5ea3ef88a3b9d-5e97d98767054-5e928c1e8d619-photo-blog-big-1.jpg', 'Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú.', 'Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú. Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú. Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú. Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú. Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú.', 1, '2020-04-25 15:09:12', 1);
 
 -- ----------------------------
 -- Table structure for blog_cate_xref
@@ -86,10 +85,11 @@ INSERT INTO `blog_cate_xref` VALUES (9, 4);
 INSERT INTO `blog_cate_xref` VALUES (14, 1);
 INSERT INTO `blog_cate_xref` VALUES (14, 5);
 INSERT INTO `blog_cate_xref` VALUES (14, 6);
-INSERT INTO `blog_cate_xref` VALUES (15, 5);
-INSERT INTO `blog_cate_xref` VALUES (15, 6);
 INSERT INTO `blog_cate_xref` VALUES (18, 1);
 INSERT INTO `blog_cate_xref` VALUES (18, 2);
+INSERT INTO `blog_cate_xref` VALUES (22, 1);
+INSERT INTO `blog_cate_xref` VALUES (22, 2);
+INSERT INTO `blog_cate_xref` VALUES (22, 3);
 
 -- ----------------------------
 -- Table structure for blog_categories
@@ -127,7 +127,7 @@ CREATE TABLE `booking`  (
   `children` int(1) NULL DEFAULT NULL,
   `room_types` int(11) NULL DEFAULT NULL,
   `request` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT '',
-  `created_date` timestamp(0) NULL DEFAULT current_timestamp(0) ON UPDATE CURRENT_TIMESTAMP(0),
+  `created_date` timestamp(0) NULL DEFAULT current_timestamp(0),
   `total_price` int(11) NULL DEFAULT NULL,
   `reply_by` int(11) NULL DEFAULT NULL,
   `reply_message` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
@@ -139,20 +139,18 @@ CREATE TABLE `booking`  (
   INDEX `book_re_by`(`reply_by`) USING BTREE,
   CONSTRAINT `book_re_by` FOREIGN KEY (`reply_by`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `book_room_id` FOREIGN KEY (`room_types`) REFERENCES `room_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of booking
 -- ----------------------------
-INSERT INTO `booking` VALUES (10, 'Duc Dinh', '1234567890', 'ducdvvph09332@fpt.edu.vn', '0000-00-00', '0000-00-00', 5, 5, 18, '', NULL, 10000000, NULL, NULL, NULL, 1, NULL);
 INSERT INTO `booking` VALUES (11, 'Duc Dinh', '1234567890', 'ducdvvph09332@fpt.edu.vn', '0000-00-00', '0000-00-00', 5, 5, 18, '', NULL, 120000000, 1, 'chúc mừng', '2020-04-19 07:41:18', 0, '2020-04-19 07:41:18');
 INSERT INTO `booking` VALUES (17, 'Duc Dinh', '1234567890', 'ducdvvph09332@fpt.edu.vn', '2020-03-13', '2020-03-17', 5, 5, 17, '', NULL, 2147483647, 1, 'THÀNH CÔNG', '2020-04-18 20:50:20', 0, '2020-04-18 20:50:20');
 INSERT INTO `booking` VALUES (18, 'Duc Dinh', '1234567890', 'dinhvietduc260820@gmail.com', '2020-03-13', '2020-03-17', 2, 2, 5, '', NULL, 28000000, 1, 'Đặt phòng thành công', '2020-04-18 20:48:30', 0, '2020-04-18 20:48:30');
-INSERT INTO `booking` VALUES (19, 'Duc Dinh', '1234567890', 'dinhvietduc260820@gmail.com', '2020-03-13', '2020-03-14', 2, 2, 5, '', NULL, 7000000, NULL, NULL, NULL, 1, NULL);
-INSERT INTO `booking` VALUES (20, 'SUPER', '1234567890', 'abcd@gmail.com', '2020-03-13', '2020-04-03', 5, 5, 17, '', NULL, 2147483647, NULL, NULL, NULL, 1, NULL);
-INSERT INTO `booking` VALUES (21, 'Duc DinhD', '1234567890', 'superadmin@gmail.com', '2020-03-13', '2020-04-29', 5, 5, 18, '', NULL, 470000000, NULL, NULL, NULL, 1, NULL);
-INSERT INTO `booking` VALUES (22, 'spa', '1234567890', 'duc@gmail.com', '2020-03-13', '2020-04-29', 5, 5, 17, '', NULL, 2147483647, NULL, NULL, NULL, 1, NULL);
+INSERT INTO `booking` VALUES (19, 'Duc Dinh', '1234567890', 'dinhvietduc260820@gmail.com', '2020-03-13', '2020-03-14', 2, 2, 5, '', '2020-04-24 18:55:22', 7000000, 12, 'Xin loi chung toi da het phong', '2020-04-24 18:55:22', 2, '2020-04-24 18:55:22');
 INSERT INTO `booking` VALUES (23, '123', '1234567890', 'abcd@gmail.com', '2020-04-20', '2029-04-20', 5, 5, 17, '', NULL, 2147483647, NULL, NULL, NULL, 1, NULL);
+INSERT INTO `booking` VALUES (25, 'ducdd', '1234567890', 'ducdinh0129@gmail.com', '2020-04-24', '2020-04-25', 5, 5, 18, '', '2020-04-24 19:08:02', 10000000, 12, 'Chung toi da het phong', '2020-04-24 19:08:02', 2, '2020-04-24 19:08:02');
+INSERT INTO `booking` VALUES (26, 'Duc Dinh', '1234567890', 'ducdinh08239@gmail.com', '2020-04-25', '2020-04-27', 5, 5, 18, '', '2020-04-24 21:02:02', 20000000, 12, 'Chúng tôi đã có phòng', '2020-04-24 21:02:02', 0, '2020-04-24 21:02:02');
 
 -- ----------------------------
 -- Table structure for contacts
@@ -174,7 +172,7 @@ CREATE TABLE `contacts`  (
   INDEX `contact_re_by`(`reply_by`) USING BTREE,
   CONSTRAINT `contact_re_by` FOREIGN KEY (`reply_by`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `contact_reply` FOREIGN KEY (`reply_for`) REFERENCES `contacts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 38 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 41 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of contacts
@@ -185,6 +183,9 @@ INSERT INTO `contacts` VALUES (34, 'Duc Dinh', '1234567890', 'ducdinh0129@gmail.
 INSERT INTO `contacts` VALUES (35, 'superadmin', '123456', 'superadmin@gmail.com', NULL, 'abcbabc', 1, 34, NULL, 0);
 INSERT INTO `contacts` VALUES (36, 'ducdvvph09332', '1234567890', 'dinhvietduc260820@gmail.com', 'Gop y', 'TỐT', 1, NULL, '2020-04-18 20:39:50', 0);
 INSERT INTO `contacts` VALUES (37, 'superadmin', '123456', 'superadmin@gmail.com', NULL, 'Cảm ơn', 1, 36, NULL, 0);
+INSERT INTO `contacts` VALUES (38, 'Duc Dinh', '1234567890', 'ducdinh08239@gmail.com', 'Gop y', 'TOT', 1, NULL, '2020-04-25 14:40:51', 0);
+INSERT INTO `contacts` VALUES (39, 'spa', '1234567890', 'abcd@gmail.com', 'Good', 'blab', NULL, NULL, NULL, 1);
+INSERT INTO `contacts` VALUES (40, 'superadmin', '123456', 'superadmin@gmail.com', NULL, 'cam on', 1, 38, NULL, 0);
 
 -- ----------------------------
 -- Table structure for customer_feedback
@@ -218,7 +219,13 @@ CREATE TABLE `forgot_password`  (
   `token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `expire_time` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 31 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of forgot_password
+-- ----------------------------
+INSERT INTO `forgot_password` VALUES (29, 'ducdinh08239@gmail.com', 'd07d02f856', '2020-04-22 21:25:45');
+INSERT INTO `forgot_password` VALUES (30, 'ducdinh08239@gmail.com', '4fa2957b48', '2020-04-24 18:52:33');
 
 -- ----------------------------
 -- Table structure for galleries
@@ -230,7 +237,7 @@ CREATE TABLE `galleries`  (
   `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `status` int(1) NULL DEFAULT 1,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of galleries
@@ -241,6 +248,10 @@ INSERT INTO `galleries` VALUES (3, 'Private Dining', 'public/images/photo-servic
 INSERT INTO `galleries` VALUES (4, 'Conference &amp; Events', 'public/images/photo-services-3-1.jpg', 1);
 INSERT INTO `galleries` VALUES (5, 'Wedding Venue', 'public/images/photo-services-4-1.jpg', 1);
 INSERT INTO `galleries` VALUES (6, 'Spa &amp; Beauty Center', 'public/images/photo-services-5-1.jpg', 1);
+INSERT INTO `galleries` VALUES (9, NULL, 'public/images/5ea3f3136f7a2-5e9a4a782d687-5e986e9059ace-photo-gallery-1.jpg', 1);
+INSERT INTO `galleries` VALUES (10, NULL, 'public/images/5ea3f31cda89e-5e9a47a34385f-5e97d8da09091-5e928c78c2c89-about.jpg', 1);
+INSERT INTO `galleries` VALUES (12, NULL, 'public/images/5ea3f36452dc8-5e986e621af0e-5e97d98767054-5e928c1e8d619-photo-blog-big-1.jpg', 1);
+INSERT INTO `galleries` VALUES (13, NULL, 'public/images/5ea3f37106c86-5ea3f1b06699f-5e980452ddfac-photo-blog-big-3.jpg', 1);
 
 -- ----------------------------
 -- Table structure for roles
@@ -272,7 +283,7 @@ CREATE TABLE `room_galleries`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `room_gall_id`(`room_id`) USING BTREE,
   CONSTRAINT `room_gall_id` FOREIGN KEY (`room_id`) REFERENCES `room_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 29 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of room_galleries
@@ -296,6 +307,14 @@ INSERT INTO `room_galleries` VALUES (17, 2, 'public/images/5e986e7c8c662-5e98361
 INSERT INTO `room_galleries` VALUES (18, 18, 'public/images/5e986e9059ace-photo-gallery-1.jpg', 1);
 INSERT INTO `room_galleries` VALUES (19, 17, 'public/images/5e98f7f9c9f7d-5e97d8da09091-5e928c78c2c89-about.jpg', 1);
 INSERT INTO `room_galleries` VALUES (20, 18, 'public/images/5e98f81c4a0ef-5e97d98767054-5e928c1e8d619-photo-blog-big-1.jpg', 1);
+INSERT INTO `room_galleries` VALUES (21, 1, 'public/images/5ea3f0f710081-photo-room-detail-4.jpg', 1);
+INSERT INTO `room_galleries` VALUES (22, 18, 'public/images/5ea3f12823a4a-5e9a47a34385f-5e97d8da09091-5e928c78c2c89-about.jpg', 1);
+INSERT INTO `room_galleries` VALUES (23, 5, 'public/images/5ea3f13976028-5e92db690ca41-photo-blog-big-2.jpg', 1);
+INSERT INTO `room_galleries` VALUES (24, 1, 'public/images/5ea3f1b06699f-5e980452ddfac-photo-blog-big-3.jpg', 1);
+INSERT INTO `room_galleries` VALUES (25, 2, 'public/images/5ea3f1e970fac-5e9a4a782d687-5e986e9059ace-photo-gallery-1.jpg', 1);
+INSERT INTO `room_galleries` VALUES (26, 17, 'public/images/5ea3f3c4b25af-5e9c17f8b2032-5e9a4a782d687-5e986e9059ace-photo-gallery-1.jpg', 1);
+INSERT INTO `room_galleries` VALUES (27, 17, 'public/images/5ea3f3d3749ff-5e92db690ca41-photo-blog-big-2.jpg', 1);
+INSERT INTO `room_galleries` VALUES (28, 5, 'public/images/5ea3f3e825706-5ea3f0f710081-photo-room-detail-4.jpg', 1);
 
 -- ----------------------------
 -- Table structure for room_service_xref
@@ -386,7 +405,7 @@ INSERT INTO `room_types` VALUES (2, 'Double Room', 'public/images/photo-gallery-
 INSERT INTO `room_types` VALUES (3, 'Deluxe Single Room', 'public/images/photo-gallery-4.jpg', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 2500000, 1, 1, 1);
 INSERT INTO `room_types` VALUES (4, 'Deluxe Double Room', 'public/images/photo-gallery-6.jpg', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 5000000, 2, 1, 1);
 INSERT INTO `room_types` VALUES (5, 'Royal Room', 'public/images/photo-gallery-9.jpg', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 7000000, 2, 2, 1);
-INSERT INTO `room_types` VALUES (17, 'VIPS', 'public/images/5e983614e590c-5e97d8da09091-5e928c78c2c89-about.jpg', 'abc', 'abcd', 1000000, 5, 5, 1);
+INSERT INTO `room_types` VALUES (17, 'VIPS', 'public/images/5e983614e590c-5e97d8da09091-5e928c78c2c89-about.jpg', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 1000000, 5, 5, 1);
 INSERT INTO `room_types` VALUES (18, 'SUPER', 'public/images/5e984d0f29d08-5e97d98767054-5e928c1e8d619-photo-blog-big-1.jpg', 'gadf', 'gádfgas', 10000000, 5, 5, 1);
 
 -- ----------------------------
@@ -401,7 +420,7 @@ CREATE TABLE `services`  (
   `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL,
   `status` int(1) NULL DEFAULT 1,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of services
@@ -412,6 +431,7 @@ INSERT INTO `services` VALUES (3, 'Conference & Events', 'public/images/photo-se
 INSERT INTO `services` VALUES (4, 'Wedding Venue', 'public/images/photo-services-4-1.jpg', 'Quầy bar thường là nơi khách hàng lui tới để thư giãn, trò chuyện và thưởng thức các loại rượu, cocktail…', 'Với những khách sạn tặng thêm dịch vụ Spa đi kèm với tiền phòng, sẽ khiến cho khách hàng ưu ái chọn dịch vụ của khách sạn nhiều hơn.Quầy bar thường là nơi khách hàng lui tới để thư giãn, trò chuyện và thưởng thức các loại rượu, cocktail…Với những khách sạn tặng thêm dịch vụ Spa đi kèm với tiền phòng, sẽ khiến cho khách hàng ưu ái chọn dịch vụ của khách sạn nhiều hơn.Quầy bar thường là nơi khách hàng lui tới để thư giãn, trò chuyện và thưởng thức các loại rượu, cocktail…', 1);
 INSERT INTO `services` VALUES (5, 'Spa &amp; Beauty Center', 'public/images/photo-services-5-1.jpg', 'Quầy bar thường là nơi khách hàng lui tới để thư giãn, trò chuyện và thưởng thức các loại rượu, cocktail…', 'Với những khách sạn tặng thêm dịch vụ Spa đi kèm với tiền phòng, sẽ khiến cho khách hàng ưu ái chọn dịch vụ của khách sạn nhiều hơn.Quầy bar thường là nơi khách hàng lui tới để thư giãn, trò chuyện và thưởng thức các loại rượu, cocktail…Với những khách sạn tặng thêm dịch vụ Spa đi kèm với tiền phòng, sẽ khiến cho khách hàng ưu ái chọn dịch vụ của khách sạn nhiều hơn.Quầy bar thường là nơi khách hàng lui tới để thư giãn, trò chuyện và thưởng thức các loại rượu, cocktail…', 1);
 INSERT INTO `services` VALUES (6, 'Swimming Pool', 'public/images/photo-services-6-1.jpg', 'Quầy bar thường là nơi khách hàng lui tới để thư giãn, trò chuyện và thưởng thức các loại rượu, cocktail…', 'Với những khách sạn tặng thêm dịch vụ Spa đi kèm với tiền phòng, sẽ khiến cho khách hàng ưu ái chọn dịch vụ của khách sạn nhiều hơn.Quầy bar thường là nơi khách hàng lui tới để thư giãn, trò chuyện và thưởng thức các loại rượu, cocktail…Với những khách sạn tặng thêm dịch vụ Spa đi kèm với tiền phòng, sẽ khiến cho khách hàng ưu ái chọn dịch vụ của khách sạn nhiều hơn.Quầy bar thường là nơi khách hàng lui tới để thư giãn, trò chuyện và thưởng thức các loại rượu, cocktail…', 1);
+INSERT INTO `services` VALUES (9, 'Travel', 'public/images/5ea3f4e171f71-5e92db690ca41-photo-blog-big-2.jpg', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 1);
 
 -- ----------------------------
 -- Table structure for slides
@@ -433,7 +453,7 @@ CREATE TABLE `slides`  (
 INSERT INTO `slides` VALUES (2, 'WELCOME TO THE GRANDIUM', 'A Place To Relax', 'in Madives', 'public/images/photo-blog-big-2.jpg\r\n', 1);
 INSERT INTO `slides` VALUES (3, 'WELCOME TO THE GRANDIUM', 'Experience the Freedom', 'in London', 'public/images/photo-blog-big-1.jpg', 1);
 INSERT INTO `slides` VALUES (4, 'WELCOME TO THE GRANDIUM', 'Time To Relax', 'in Grandium', 'public/images/photo-room-detail-1.jpg', 1);
-INSERT INTO `slides` VALUES (5, 'WELCOME TO THE GRANDIUM', 'Touch The Sea 1', 'in Monaco 1', 'public/images/5e928c78c2c89-about.jpg', 1);
+INSERT INTO `slides` VALUES (5, 'WELCOME TO THE GRANDIUM', 'Touch The Sea 2', 'in Monaco 2', 'public/images/5e928c78c2c89-about.jpg', 1);
 
 -- ----------------------------
 -- Table structure for users
@@ -463,7 +483,7 @@ INSERT INTO `users` VALUES (8, 'abc@gmail.com', 'ducdvvph09332', '$2y$10$9H5EUUn
 INSERT INTO `users` VALUES (9, '123456@gmail.com', '123', '$2y$10$.XZeqMkmkQxJCkUydmlJlOX1N3Vs7VulszLhP1FmNqKyeEwy9w6VS', 'public/images/5e919f8b80b29-5e915d393689d-user-3.jpg', '0987456321', 1, 1);
 INSERT INTO `users` VALUES (10, 'ducdvvph09332@fpt.edu.vn', 'Duc Dinh', '$2y$10$ei.ZFOYR0hCGRSGypGArWO.9rTV6EAzpk3w/uEs2AhsMDXwgG9NBq', NULL, '0987456321', 1, 1);
 INSERT INTO `users` VALUES (11, 'abcd@gmail.com', 'Duc Dinh', '$2y$10$BaOFlt2Q/UFOqZSyeyrjtuh78.D10nimkHPue6vGWCXWomuc38hO.', NULL, '0987456321', 1, 1);
-INSERT INTO `users` VALUES (12, 'ducdinh08239@gmail.com', 'Duc Dinh', '$2y$10$9V96GLqQHDKDlpgLajl45ubl1iNPyClX3Fv6nTRJmMNeS4QH0jwuC', NULL, '0987456321', 1, 1);
+INSERT INTO `users` VALUES (12, 'ducdinh08239@gmail.com', 'Duc Dinh', '$2y$10$CxSxk/YpgHGrlVa5GLsy2uEXrP0eRQz4rbPZTCFm6vzjMhrbutFfK', NULL, '0987456321', 2, 1);
 INSERT INTO `users` VALUES (14, 'ducdinh0129@gmail.com', 'ddd', '$2y$10$rkx67RPPMEax3JNxbXd2gOevR7tWtq4CnEOlm8A7AS2rCPuTOE2Vy', NULL, '34673216648', 1, 1);
 
 -- ----------------------------
