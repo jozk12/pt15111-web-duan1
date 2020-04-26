@@ -9,7 +9,6 @@ $getBlogs = "select b.*, u.name name
                     on b.author_id = u.id
                     ORDER BY b.id DESC";
 $blogs = queryExecute($getBlogs, true);
-
 ?>
 <!DOCTYPE html>
 <html>

@@ -5,13 +5,13 @@
  Source Server Type    : MySQL
  Source Server Version : 100408
  Source Host           : localhost:3306
- Source Schema         : duan1
+ Source Schema         : duan1_db
 
  Target Server Type    : MySQL
  Target Server Version : 100408
  File Encoding         : 65001
 
- Date: 25/04/2020 15:45:07
+ Date: 26/04/2020 07:15:53
 */
 
 SET NAMES utf8mb4;
@@ -33,7 +33,7 @@ CREATE TABLE `blog`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `blog_author`(`author_id`) USING BTREE,
   CONSTRAINT `blog_author` FOREIGN KEY (`author_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 24 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of blog
@@ -46,9 +46,9 @@ INSERT INTO `blog` VALUES (5, 'Best Things to Do In London Enjoy the Nightlife 1
 INSERT INTO `blog` VALUES (6, 'Best Things to Do In London Enjoy the Nightlife 2', 'public/images/photo-services-5-1.jpg', 'Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú. ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper leo eu aliquet ultricies. Proin sit amet porta lorem, nec bibendum augue. Phasellus vehicula augue eu bibendum varius. Fusce egestas urna ac ullamcorper pulvinar. Mauris a mauris accumsan felis auctor ultrices. Maecenas eu vehicula dolor. Nullam ac facilisis mi. Praesent efficitur rutrum accumsan. Vivamus aliquet eros vel suscipit pretium.\r\n\r\nEtiam congue mollis mi a mollis. Fusce quam enim, posuere et nibh nec, facilisis tempus odio. In blandit lectus dignissim ipsum suscipit, hendrerit hendrerit turpis accumsan. Aliquam auctor orci erat, vitae vehicula tellus dapibus sed. Mauris bibendum diam in ex dignissim, id cursus neque venenatis. Donec at libero vulputate, maximus mauris vel, maximus sem. Pellentesque dapibus pulvinar augue aliquam dictum. Morbi sit amet elementum ipsum. Cras venenatis turpis ac efficitur mattis. Proin venenatis euismod massa, vitae gravida mauris mattis ut. In placerat tristique nulla, sed commodo magna cursus ut. Nullam scelerisque imperdiet magna in dignissim. Vivamus vitae odio nec ipsum pellentesque dapibus at sed augue. Fusce vel luctus risus, non viverra sem. Nullam sit amet massa enim.\r\n\r\nProin aliquam consectetur mi id vehicula. Nam cursus mauris lorem, ac mollis tortor ultricies a. Nam pulvinar nulla tellus, volutpat dignissim dui elementum mollis. Donec feugiat mi eu porta dignissim. Proin scelerisque nulla ex, sit amet fringilla nunc vulputate vel. Pellentesque sit amet vestibulum odio, in elementum risus. Duis ut mi sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut efficitur ante eu sem hendrerit facilisis. Aliquam non efficitur nulla. Curabitur ante felis, tincidunt a libero ac, mollis accumsan enim. Morbi hendrerit semper nunc, eget aliquam leo feugiat sed.', 2, '2020-03-27 22:12:09', 1);
 INSERT INTO `blog` VALUES (9, 'Best Things to Do In London Enjoy the Sunlife', 'public/images/5e985b2ac3f80-5e92db690ca41-photo-blog-big-2.jpg', 'agabds', 'agadfgads', 1, '2020-04-17 20:55:39', 1);
 INSERT INTO `blog` VALUES (14, 'Touch The Sea 2', 'public/images/5e9a4a782d687-5e986e9059ace-photo-gallery-1.jpg', 'fafsdsdf', 'ầgadfg', 1, NULL, 1);
-INSERT INTO `blog` VALUES (17, 'td3', 'public/images/5e9c17f8b2032-5e9a4a782d687-5e986e9059ace-photo-gallery-1.jpg', NULL, NULL, NULL, '2020-04-19 16:28:20', 1);
 INSERT INTO `blog` VALUES (18, 'ầddgs', 'public/images/5e9c1b9058f06-5e9a47a34385f-5e97d8da09091-5e928c78c2c89-about.jpg', 'adsafa', 'fasdsad', 1, '2020-04-19 16:36:16', 1);
 INSERT INTO `blog` VALUES (22, 'Best Things to Do In NewYork Enjoy the Sunlife', 'public/images/5ea3ef88a3b9d-5e97d98767054-5e928c1e8d619-photo-blog-big-1.jpg', 'Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú.', 'Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú. Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú. Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú. Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú. Những dịch vụ trong khách sạn được mở ra nhằm mục đích mang đến sự hài lòng, tiện lợi cho khách lưu trú.', 1, '2020-04-25 15:09:12', 1);
+INSERT INTO `blog` VALUES (23, 'New blog', 'public/images/5ea4d25380b55-5ea3f37106c86-5ea3f1b06699f-5e980452ddfac-photo-blog-big-3.jpg', 'abcbabababacbacba', 'babababababababababba', 12, '2020-04-26 07:14:11', 1);
 
 -- ----------------------------
 -- Table structure for blog_cate_xref
@@ -90,6 +90,8 @@ INSERT INTO `blog_cate_xref` VALUES (18, 2);
 INSERT INTO `blog_cate_xref` VALUES (22, 1);
 INSERT INTO `blog_cate_xref` VALUES (22, 2);
 INSERT INTO `blog_cate_xref` VALUES (22, 3);
+INSERT INTO `blog_cate_xref` VALUES (23, 2);
+INSERT INTO `blog_cate_xref` VALUES (23, 6);
 
 -- ----------------------------
 -- Table structure for blog_categories
@@ -219,13 +221,14 @@ CREATE TABLE `forgot_password`  (
   `token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `expire_time` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 31 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 32 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of forgot_password
 -- ----------------------------
 INSERT INTO `forgot_password` VALUES (29, 'ducdinh08239@gmail.com', 'd07d02f856', '2020-04-22 21:25:45');
 INSERT INTO `forgot_password` VALUES (30, 'ducdinh08239@gmail.com', '4fa2957b48', '2020-04-24 18:52:33');
+INSERT INTO `forgot_password` VALUES (31, 'ducdinh08239@gmail.com', '4b497923d4', '2020-04-25 16:14:16');
 
 -- ----------------------------
 -- Table structure for galleries
@@ -483,7 +486,7 @@ INSERT INTO `users` VALUES (8, 'abc@gmail.com', 'ducdvvph09332', '$2y$10$9H5EUUn
 INSERT INTO `users` VALUES (9, '123456@gmail.com', '123', '$2y$10$.XZeqMkmkQxJCkUydmlJlOX1N3Vs7VulszLhP1FmNqKyeEwy9w6VS', 'public/images/5e919f8b80b29-5e915d393689d-user-3.jpg', '0987456321', 1, 1);
 INSERT INTO `users` VALUES (10, 'ducdvvph09332@fpt.edu.vn', 'Duc Dinh', '$2y$10$ei.ZFOYR0hCGRSGypGArWO.9rTV6EAzpk3w/uEs2AhsMDXwgG9NBq', NULL, '0987456321', 1, 1);
 INSERT INTO `users` VALUES (11, 'abcd@gmail.com', 'Duc Dinh', '$2y$10$BaOFlt2Q/UFOqZSyeyrjtuh78.D10nimkHPue6vGWCXWomuc38hO.', NULL, '0987456321', 1, 1);
-INSERT INTO `users` VALUES (12, 'ducdinh08239@gmail.com', 'Duc Dinh', '$2y$10$CxSxk/YpgHGrlVa5GLsy2uEXrP0eRQz4rbPZTCFm6vzjMhrbutFfK', NULL, '0987456321', 2, 1);
+INSERT INTO `users` VALUES (12, 'ducdinh08239@gmail.com', 'Duc Dinh', '$2y$10$dvKJKi7jjKleoPYcCh5dXeSEQKEMUO5faQbbXlw1ac66c4BtfC8x.', NULL, '0987456321', 2, 1);
 INSERT INTO `users` VALUES (14, 'ducdinh0129@gmail.com', 'ddd', '$2y$10$rkx67RPPMEax3JNxbXd2gOevR7tWtq4CnEOlm8A7AS2rCPuTOE2Vy', NULL, '34673216648', 1, 1);
 
 -- ----------------------------
