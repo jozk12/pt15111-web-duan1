@@ -8,7 +8,7 @@
     define('REG_THEME_ASSET_URL',BASE_URL.'public/registertheme');
     define('DEFAULT_IMAGE', BASE_URL . 'public/images/default-image.jpg');
     define('AUTH', 'AUTH_SESSION');
-    define('BOOK', 'AUTH_SESSION_B');
+    define('BOOK', 'BOOK_SESSION');
 
     function getdbConn(){
         try{
