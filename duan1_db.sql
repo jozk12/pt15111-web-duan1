@@ -11,7 +11,7 @@
  Target Server Version : 100408
  File Encoding         : 65001
 
- Date: 26/04/2020 07:15:53
+ Date: 07/05/2020 12:26:53
 */
 
 SET NAMES utf8mb4;
@@ -141,18 +141,25 @@ CREATE TABLE `booking`  (
   INDEX `book_re_by`(`reply_by`) USING BTREE,
   CONSTRAINT `book_re_by` FOREIGN KEY (`reply_by`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `book_room_id` FOREIGN KEY (`room_types`) REFERENCES `room_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 34 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of booking
 -- ----------------------------
 INSERT INTO `booking` VALUES (11, 'Duc Dinh', '1234567890', 'ducdvvph09332@fpt.edu.vn', '0000-00-00', '0000-00-00', 5, 5, 18, '', NULL, 120000000, 1, 'chúc mừng', '2020-04-19 07:41:18', 0, '2020-04-19 07:41:18');
-INSERT INTO `booking` VALUES (17, 'Duc Dinh', '1234567890', 'ducdvvph09332@fpt.edu.vn', '2020-03-13', '2020-03-17', 5, 5, 17, '', NULL, 2147483647, 1, 'THÀNH CÔNG', '2020-04-18 20:50:20', 0, '2020-04-18 20:50:20');
-INSERT INTO `booking` VALUES (18, 'Duc Dinh', '1234567890', 'dinhvietduc260820@gmail.com', '2020-03-13', '2020-03-17', 2, 2, 5, '', NULL, 28000000, 1, 'Đặt phòng thành công', '2020-04-18 20:48:30', 0, '2020-04-18 20:48:30');
-INSERT INTO `booking` VALUES (19, 'Duc Dinh', '1234567890', 'dinhvietduc260820@gmail.com', '2020-03-13', '2020-03-14', 2, 2, 5, '', '2020-04-24 18:55:22', 7000000, 12, 'Xin loi chung toi da het phong', '2020-04-24 18:55:22', 2, '2020-04-24 18:55:22');
-INSERT INTO `booking` VALUES (23, '123', '1234567890', 'abcd@gmail.com', '2020-04-20', '2029-04-20', 5, 5, 17, '', NULL, 2147483647, NULL, NULL, NULL, 1, NULL);
+INSERT INTO `booking` VALUES (17, 'Duc Dinh', '1234567890', 'ducdvvph09332@fpt.edu.vn', '2020-03-13', '2020-03-17', 5, 5, 17, '', NULL, 147483647, 1, 'THÀNH CÔNG', '2020-05-05 11:15:16', 0, '2020-05-05 11:15:16');
+INSERT INTO `booking` VALUES (18, 'Duc Dinh', '1234567890', 'dinhvietduc260820@gmail.com', '2020-03-13', '2020-03-17', 2, 2, 5, '', NULL, 28000000, 1, 'Đặt phòng thành công', '2020-05-05 07:19:17', 0, '2020-06-18 20:48:30');
+INSERT INTO `booking` VALUES (19, 'Duc Dinh', '1234567890', 'dinhvietduc260820@gmail.com', '2020-03-13', '2020-03-14', 2, 2, 5, '', '2020-04-24 18:55:22', 7000000, 12, 'Xin loi chung toi da het phong', '2020-05-05 07:19:25', 2, '2020-07-24 18:55:22');
+INSERT INTO `booking` VALUES (23, '123', '1234567890', 'abcd@gmail.com', '2020-04-20', '2029-04-20', 5, 5, 17, '', NULL, 147483647, NULL, NULL, '2020-05-05 11:15:14', 1, '2020-05-05 11:15:14');
 INSERT INTO `booking` VALUES (25, 'ducdd', '1234567890', 'ducdinh0129@gmail.com', '2020-04-24', '2020-04-25', 5, 5, 18, '', '2020-04-24 19:08:02', 10000000, 12, 'Chung toi da het phong', '2020-04-24 19:08:02', 2, '2020-04-24 19:08:02');
 INSERT INTO `booking` VALUES (26, 'Duc Dinh', '1234567890', 'ducdinh08239@gmail.com', '2020-04-25', '2020-04-27', 5, 5, 18, '', '2020-04-24 21:02:02', 20000000, 12, 'Chúng tôi đã có phòng', '2020-04-24 21:02:02', 0, '2020-04-24 21:02:02');
+INSERT INTO `booking` VALUES (27, 'thienth', '0987654321', 'thienth32@gmail.com', '2020-04-27', '2020-04-28', 5, 5, 18, '', '2020-04-26 07:39:01', 10000000, NULL, NULL, '2020-05-07 10:22:46', 1, '2020-05-05 10:22:53');
+INSERT INTO `booking` VALUES (28, 'Test booking', '1234567890', 'ducdinh0129@gmail.com', '2020-05-05', '2020-05-07', 5, 5, 17, '', '2020-05-04 22:14:34', 2000000, 1, 'Cảm ơn bạn đã đặt phòng tại grandium', '2020-05-04 22:15:14', 0, '2020-05-04 22:15:14');
+INSERT INTO `booking` VALUES (29, 'MAza', '1234567890', 'abcd@gmail.com', '2020-05-06', '2020-05-09', 5, 5, 18, '', '2020-05-05 09:13:56', 30000000, 12, '<p>ok</p>\r\n<div id=\"eJOY__extension_root\" style=\"all: unset;\"></div>', '2020-05-05 09:14:18', 0, '2020-05-05 09:14:18');
+INSERT INTO `booking` VALUES (30, 'ddd', '1234567890', 'abcd@gmail.com', '2020-05-13', '2020-05-22', 5, 5, 17, '', '2020-05-05 09:38:20', 9000000, 12, '<p>abc</p>\r\n<div id=\"eJOY__extension_root\" style=\"all: unset;\"></div>', '2020-05-05 09:39:49', 0, '2020-07-05 09:38:34');
+INSERT INTO `booking` VALUES (31, 'spa', '1234567890', 'abcd@gmail.com', '2020-05-06', '2020-05-13', 5, 5, 18, '', '2020-05-05 09:54:57', 70000000, 12, '<p>ok</p>\r\n<div id=\"eJOY__extension_root\" style=\"all: unset;\"></div>', '2020-05-05 09:56:32', 0, '2020-09-05 09:56:13');
+INSERT INTO `booking` VALUES (32, '123', '1234567890', 'abcd@gmail.com', '2020-05-06', '2020-05-07', 5, 5, 18, '', '2020-05-05 09:55:31', 10000000, 12, '<p>&nbsp;</p>\r\n<div id=\"eJOY__extension_root\" style=\"all: unset;\"></div>', '2020-05-05 14:30:48', 0, '2020-09-05 09:55:59');
+INSERT INTO `booking` VALUES (33, 'Test booking 2', '1234567890', 'ducdinh08239@gmail.com', '2020-05-06', '2020-05-08', 5, 5, 18, 'Ko có j', '2020-05-05 13:21:45', 20000000, 12, '<p>&nbsp;</p>\r\n<div id=\"eJOY__extension_root\" style=\"all: unset;\"></div>', '2020-05-05 13:23:14', 0, '2020-05-05 13:23:14');
 
 -- ----------------------------
 -- Table structure for contacts
@@ -167,14 +174,14 @@ CREATE TABLE `contacts`  (
   `message` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT '',
   `reply_by` int(11) NULL DEFAULT NULL,
   `reply_for` int(11) NULL DEFAULT NULL,
-  `create_at` timestamp(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0),
+  `create_at` timestamp(0) NULL DEFAULT current_timestamp(0) ON UPDATE CURRENT_TIMESTAMP(0),
   `status` int(1) NULL DEFAULT 1,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `contacts_for`(`reply_for`) USING BTREE,
   INDEX `contact_re_by`(`reply_by`) USING BTREE,
   CONSTRAINT `contact_re_by` FOREIGN KEY (`reply_by`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `contact_reply` FOREIGN KEY (`reply_for`) REFERENCES `contacts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 41 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 50 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of contacts
@@ -186,8 +193,15 @@ INSERT INTO `contacts` VALUES (35, 'superadmin', '123456', 'superadmin@gmail.com
 INSERT INTO `contacts` VALUES (36, 'ducdvvph09332', '1234567890', 'dinhvietduc260820@gmail.com', 'Gop y', 'TỐT', 1, NULL, '2020-04-18 20:39:50', 0);
 INSERT INTO `contacts` VALUES (37, 'superadmin', '123456', 'superadmin@gmail.com', NULL, 'Cảm ơn', 1, 36, NULL, 0);
 INSERT INTO `contacts` VALUES (38, 'Duc Dinh', '1234567890', 'ducdinh08239@gmail.com', 'Gop y', 'TOT', 1, NULL, '2020-04-25 14:40:51', 0);
-INSERT INTO `contacts` VALUES (39, 'spa', '1234567890', 'abcd@gmail.com', 'Good', 'blab', NULL, NULL, NULL, 1);
+INSERT INTO `contacts` VALUES (39, 'spa', '1234567890', 'abcd@gmail.com', 'Good', 'blab', NULL, NULL, '2020-05-06 10:16:30', 1);
 INSERT INTO `contacts` VALUES (40, 'superadmin', '123456', 'superadmin@gmail.com', NULL, 'cam on', 1, 38, NULL, 0);
+INSERT INTO `contacts` VALUES (43, 'Duc Dinh test contact', '1234567890', 'abcda@gmail.com', 'Gop y', 'OK', NULL, NULL, '2020-07-06 10:19:04', 1);
+INSERT INTO `contacts` VALUES (44, 'Duc Dinh test 2', '1234567890', 'ab@gmail.com', 'Gop y', 'OC', 12, NULL, '2020-05-05 13:19:04', 0);
+INSERT INTO `contacts` VALUES (45, 'Duc Dinh test 3', '1234567890', 'aab@gmail.com', 'Good', '123', NULL, NULL, '2020-05-05 10:20:52', 1);
+INSERT INTO `contacts` VALUES (46, 'Duc Dinh test 4', '1234567890', 'test4@gmail.com', 'good', '123', NULL, NULL, '2020-05-05 10:36:09', 1);
+INSERT INTO `contacts` VALUES (47, 'Duc Dinh', '0987456321', 'ducdinh08239@gmail.com', NULL, '<p>Test Gửi</p>\r\n<p>&nbsp;</p>\r\n<div id=\"eJOY__extension_root\" style=\"all: unset;\"></div>', 12, 44, '2020-05-05 13:19:04', 0);
+INSERT INTO `contacts` VALUES (48, 'test contact 5', '1234567890', 'abcdef@gmail.com', 'Gop y', 'abc', 1, NULL, '2020-05-07 09:19:48', 0);
+INSERT INTO `contacts` VALUES (49, 'superadmin', '123456', 'superadmin@gmail.com', NULL, '<p>ok</p>\r\n<p>&nbsp;</p>\r\n<div id=\"eJOY__extension_root\" style=\"all: unset;\"></div>', 1, 48, '2020-05-07 09:19:47', 0);
 
 -- ----------------------------
 -- Table structure for customer_feedback
@@ -201,15 +215,15 @@ CREATE TABLE `customer_feedback`  (
   `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL,
   `status` int(1) NULL DEFAULT 1,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of customer_feedback
 -- ----------------------------
 INSERT INTO `customer_feedback` VALUES (1, 'MARILYN SUTTLE', 'HA NOI', 'public/images/user-1.jpg', 'Mình vừa trải qua kỳ nghỉ 3 ngày 2 đêm tại Khách sạn Kings finger ở Đà Nẵng. Thực sự mình rất ấn tượng và cực kỳ happy vì đã gặp được những con người Đà Nẵng thân thiện và khách sạn Kings finger hoàn toàn hoàn hảo theo ý muốn của mình.', 1);
-INSERT INTO `customer_feedback` VALUES (2, 'JACK MASON', 'HAI PHONG', 'public/images/user-2.jpg', 'Mình vừa trải qua kỳ nghỉ 3 ngày 2 đêm tại Khách sạn Kings finger ở Đà Nẵng. Thực sự mình rất ấn tượng và cực kỳ happy vì đã gặp được những con người Đà Nẵng thân thiện và khách sạn Kings finger hoàn toàn hoàn hảo theo ý muốn của mình.', 1);
-INSERT INTO `customer_feedback` VALUES (3, 'MICHAEL FELDSTEIN', 'HAI DUONG', 'public/images/user-3.jpg', 'Mình vừa trải qua kỳ nghỉ 3 ngày 2 đêm tại Khách sạn Kings finger ở Đà Nẵng. Thực sự mình rất ấn tượng và cực kỳ happy vì đã gặp được những con người Đà Nẵng thân thiện và khách sạn Kings finger hoàn toàn hoàn hảo theo ý muốn của mình.', 1);
+INSERT INTO `customer_feedback` VALUES (2, 'JACK MASON', 'HAI PHONG', 'public/images/user-2.jpg', 'Mình vừa trải qua kỳ nghỉ 3 ngày 2 đêm tại Khách sạn Kings finger ở Đà Nẵng. Thực sự mình rất ấn tượng và cực kỳ happy vì đã gặp được những con người Đà Nẵng thân thiện và khách sạn Kings finger hoàn toàn hoàn hảo theo ý muốn của mình. hahahaha', 1);
 INSERT INTO `customer_feedback` VALUES (4, 'JOHN FEDERICO', 'QUANG NINH', 'public/images/user-4.jpg', 'Mình vừa trải qua kỳ nghỉ 3 ngày 2 đêm tại Khách sạn Kings finger ở Đà Nẵng. Thực sự mình rất ấn tượng và cực kỳ happy vì đã gặp được những con người Đà Nẵng thân thiện và khách sạn Kings finger hoàn toàn hoàn hảo theo ý muốn của mình.', 1);
+INSERT INTO `customer_feedback` VALUES (7, 'test tiny mce', 'Haiphong', 'public/images/5eb03b8d8ffeb-5e95bf66391e4-5e915d393689d-user-3.jpg', '<p>testing tiny</p>\r\n<div id=\"eJOY__extension_root\" style=\"all: unset;\"></div>', 1);
 
 -- ----------------------------
 -- Table structure for forgot_password
@@ -221,7 +235,7 @@ CREATE TABLE `forgot_password`  (
   `token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `expire_time` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 32 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 33 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of forgot_password
@@ -229,6 +243,7 @@ CREATE TABLE `forgot_password`  (
 INSERT INTO `forgot_password` VALUES (29, 'ducdinh08239@gmail.com', 'd07d02f856', '2020-04-22 21:25:45');
 INSERT INTO `forgot_password` VALUES (30, 'ducdinh08239@gmail.com', '4fa2957b48', '2020-04-24 18:52:33');
 INSERT INTO `forgot_password` VALUES (31, 'ducdinh08239@gmail.com', '4b497923d4', '2020-04-25 16:14:16');
+INSERT INTO `forgot_password` VALUES (32, 'ducdinh08239@gmail.com', 'c0cd64b1f5', '2020-05-02 15:57:42');
 
 -- ----------------------------
 -- Table structure for galleries
@@ -344,6 +359,7 @@ INSERT INTO `room_service_xref` VALUES (2, 4);
 INSERT INTO `room_service_xref` VALUES (3, 2);
 INSERT INTO `room_service_xref` VALUES (3, 3);
 INSERT INTO `room_service_xref` VALUES (4, 1);
+INSERT INTO `room_service_xref` VALUES (4, 3);
 INSERT INTO `room_service_xref` VALUES (5, 1);
 INSERT INTO `room_service_xref` VALUES (5, 2);
 INSERT INTO `room_service_xref` VALUES (5, 3);
@@ -406,7 +422,7 @@ CREATE TABLE `room_types`  (
 INSERT INTO `room_types` VALUES (1, 'Single Room', 'public/images/photo-gallery-2.jpg', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 1000000, 1, 1, 1);
 INSERT INTO `room_types` VALUES (2, 'Double Room', 'public/images/photo-gallery-3.jpg', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 2000000, 2, 1, 1);
 INSERT INTO `room_types` VALUES (3, 'Deluxe Single Room', 'public/images/photo-gallery-4.jpg', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 2500000, 1, 1, 1);
-INSERT INTO `room_types` VALUES (4, 'Deluxe Double Room', 'public/images/photo-gallery-6.jpg', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 5000000, 2, 1, 1);
+INSERT INTO `room_types` VALUES (4, 'Deluxe Double Room', 'public/images/photo-gallery-6.jpg', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 5000000, 3, 1, 1);
 INSERT INTO `room_types` VALUES (5, 'Royal Room', 'public/images/photo-gallery-9.jpg', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 7000000, 2, 2, 1);
 INSERT INTO `room_types` VALUES (17, 'VIPS', 'public/images/5e983614e590c-5e97d8da09091-5e928c78c2c89-about.jpg', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 'Only a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet watersOnly a 45-minute drive from downtown Hanoi, Flamingo Dai Lai lies secluded where mountains meet waters', 1000000, 5, 5, 1);
 INSERT INTO `room_types` VALUES (18, 'SUPER', 'public/images/5e984d0f29d08-5e97d98767054-5e928c1e8d619-photo-blog-big-1.jpg', 'gadf', 'gádfgas', 10000000, 5, 5, 1);
@@ -486,7 +502,7 @@ INSERT INTO `users` VALUES (8, 'abc@gmail.com', 'ducdvvph09332', '$2y$10$9H5EUUn
 INSERT INTO `users` VALUES (9, '123456@gmail.com', '123', '$2y$10$.XZeqMkmkQxJCkUydmlJlOX1N3Vs7VulszLhP1FmNqKyeEwy9w6VS', 'public/images/5e919f8b80b29-5e915d393689d-user-3.jpg', '0987456321', 1, 1);
 INSERT INTO `users` VALUES (10, 'ducdvvph09332@fpt.edu.vn', 'Duc Dinh', '$2y$10$ei.ZFOYR0hCGRSGypGArWO.9rTV6EAzpk3w/uEs2AhsMDXwgG9NBq', NULL, '0987456321', 1, 1);
 INSERT INTO `users` VALUES (11, 'abcd@gmail.com', 'Duc Dinh', '$2y$10$BaOFlt2Q/UFOqZSyeyrjtuh78.D10nimkHPue6vGWCXWomuc38hO.', NULL, '0987456321', 1, 1);
-INSERT INTO `users` VALUES (12, 'ducdinh08239@gmail.com', 'Duc Dinh', '$2y$10$dvKJKi7jjKleoPYcCh5dXeSEQKEMUO5faQbbXlw1ac66c4BtfC8x.', NULL, '0987456321', 2, 1);
+INSERT INTO `users` VALUES (12, 'ducdinh08239@gmail.com', 'Duc Dinh', '$2y$10$oOObMLuXyMTSZIjfGkDLa.XySEEEvQ4xXXBFpehoQdHfk6kfYkC4G', NULL, '0987456321', 2, 1);
 INSERT INTO `users` VALUES (14, 'ducdinh0129@gmail.com', 'ddd', '$2y$10$rkx67RPPMEax3JNxbXd2gOevR7tWtq4CnEOlm8A7AS2rCPuTOE2Vy', NULL, '34673216648', 1, 1);
 
 -- ----------------------------

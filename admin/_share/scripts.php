@@ -50,6 +50,15 @@
 <script src="<?= ADMIN_ASSET_URL ?>plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
 <!-- Bootstrap Switch -->
 <script src="<?= ADMIN_ASSET_URL ?>plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<!-- ChartJS -->
+<script src="<?= ADMIN_ASSET_URL ?>plugins/chart.js/Chart.min.js"></script>
+<!-- tiny mce -->
+<script src="https://cdn.tiny.cloud/1/606codtj0v7s9isbar04s6qhfnrn3min48c9lyu3v9dhcpa5/tinymce/5/tinymce.min.js" referrerpolicy="origin"/></script>
+<script>
+   tinymce.init({
+      selector: '.content_mce'
+    });
+</script>
 <!-- Page script -->
 <script>
     $(document).ready(function() {

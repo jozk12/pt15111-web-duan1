@@ -63,7 +63,7 @@ if (!$fb) {
                                         </div>
                                         <div class="form-group">
                                             <label for="">Nội dung</label>
-                                            <textarea name="content" class="form-control" id="" cols="30" rows="10"> <?= $fb['content'] ?></textarea>
+                                            <textarea name="content" class="form-control content_mce" id="" cols="30" rows="10"> <?= $fb['content'] ?></textarea>
                                             <?php if (isset($_GET['contenterr'])) : ?><label for="" class="error"><?= $_GET['contenterr'] ?></label>
                                             <?php endif ?>
                                         </div>

@@ -47,7 +47,7 @@ checkAdminLoggedIn();
                                         </div>
                                         <div class="form-group">
                                             <label for="">Mô tả chi tiết</label>
-                                            <textarea name="desc" id="" cols="30" rows="15" class="form-control"></textarea>
+                                            <textarea name="desc" id="" cols="30" rows="15" class="form-control content_mce"></textarea>
                                             <?php if (isset($_GET['descerr'])) : ?><label for="" class="error"><?= $_GET['descerr'] ?></label>
                                             <?php endif ?>
                                         </div>
@@ -73,7 +73,7 @@ checkAdminLoggedIn();
                                         </div>
                                         <div class="form-group">
                                             <label for="">Mô tả ngắn</label>
-                                            <textarea name="short_desc" id="" cols="30" rows="8" class="form-control"></textarea>
+                                            <textarea name="short_desc" id="" cols="30" rows="8" class="form-control content_mce"></textarea>
                                             <?php if (isset($_GET['short_descerr'])) : ?><label for="" class="error"><?= $_GET['short_descerr'] ?></label>
                                             <?php endif ?>
                                         </div>

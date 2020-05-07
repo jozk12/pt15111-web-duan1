@@ -2,22 +2,26 @@
 session_start();
 require_once "../../config/utils.php";
 checkAdminLoggedIn();
-if(isset($_GET['checked'])){
-    $getBooking = "select b.*, r.name rName 
+if (isset($_GET['checked'])) {
+    $getBooking = "select b.*, r.name rName ,u.name uName
                         from booking b
                         join room_types r
                         on r.id = b.room_types
+                        join users u
+                        on u.id = b.reply_by
                         where b.check_in = 0
                         ORDER BY b.id DESC";
-}elseif(isset($_GET['notchecked'])){
-    $getBooking = "select b.*, r.name rName 
+} elseif (isset($_GET['notchecked'])) {
+    $getBooking = "select b.*, r.name rName ,u.name uName 
                         from booking b
                         join room_types r
                         on r.id = b.room_types
+                        join users u
+                        on u.id = b.reply_by
                         where b.check_in = 2
                         ORDER BY b.id DESC";
-}else{
-    $getBooking = "select b.*, r.name rName 
+} else {
+    $getBooking = "select b.*, r.name rName
                         from booking b
                         join room_types r
                         on r.id = b.room_types
@@ -70,10 +74,14 @@ $bookings = queryExecute($getBooking, true);
                                             <th>Email</th>
                                             <th>Loại phòng</th>
                                             <th>Giá hóa đơn</th>
+                                            <?php if (isset($_GET['checked']) || isset($_GET['notchecked'])) : ?>
+                                                <th>Người duyệt</th>
+                                                <th>Ngày duyệt</th>
+                                            <?php endif ?>
                                             <th>
-                                                <a href="<?= ADMIN_URL . 'booking' ?>" class="btn btn-warning btn-sm"><i class="far fa-circle"></i> Chưa duyệt</a>
-                                                <a href="<?= ADMIN_URL . 'booking?notchecked' ?>" class="btn btn-danger btn-sm"><i class="far fa-times-circle"></i> Không duyệt</a>
-                                                <a href="<?= ADMIN_URL . 'booking?checked' ?>" class="btn btn-success btn-sm"><i class="far fa-check-circle"></i> Đã duyệt</a>
+                                                <a href="<?= ADMIN_URL . 'booking' ?>" class="btn btn-warning btn-m"><i class="far fa-circle"></i> Chưa duyệt</a>
+                                                <a href="<?= ADMIN_URL . 'booking?notchecked' ?>" class="btn btn-danger btn-m"><i class="far fa-times-circle"></i> Không duyệt</a>
+                                                <a href="<?= ADMIN_URL . 'booking?checked' ?>" class="btn btn-success btn-m"><i class="far fa-check-circle"></i> Đã duyệt</a>
                                             </th>
                                         </tr>
                                     </thead>
@@ -84,10 +92,14 @@ $bookings = queryExecute($getBooking, true);
                                                 <td><?= $book['phone_number'] ?></td>
                                                 <td><?= $book['email'] ?></td>
                                                 <td><?= $book['rName'] ?></td>
-                                                <td><?= $book['total_price'] ?></td>
+                                                <td><?= number_format($book['total_price'], 0, ",", ".") ?></td>
+                                                <?php if (isset($_GET['checked']) || isset($_GET['notchecked'])) : ?>
+                                                    <td><?= $book['uName']?></td>
+                                                    <td><?= $book['checked_in_date']?></td>
+                                                <?php endif ?>
                                                 <td>
-                                                    <a href="<?= ADMIN_URL . 'booking/checking-form.php?id=' . $book['id'] ?>" class="btn btn-sm btn-info"><i class="far fa-calendar-check"></i></a>
-                                                    <a href="<?= ADMIN_URL . 'booking/remove.php?id=' . $book['id'] ?>" class="btn-remove btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?= ADMIN_URL . 'booking/checking-form.php?id=' . $book['id'] ?>" class="btn btn-m btn-info"><i class="far fa-calendar-check"></i></a>
+                                                    <a href="<?= ADMIN_URL . 'booking/remove.php?id=' . $book['id'] ?>" class="btn-remove btn btn-m btn-danger"><i class="fa fa-trash"></i></a>
                                                 </td>
                                             </tr>
                                         <?php endforeach ?>

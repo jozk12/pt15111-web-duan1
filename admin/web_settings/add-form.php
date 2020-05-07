@@ -85,13 +85,13 @@ checkAdminLoggedIn();
                                         </div>
                                         <div class="form-group">
                                             <label for="">Giới thiệu web</label>
-                                            <textarea name="about" class="form-control" cols="30" rows="7"></textarea>
+                                            <textarea name="about"  class="form-control content_mce" cols="30" rows="7"></textarea>
                                             <?php if (isset($_GET['abouterr'])) : ?><label for="" class="error"><?= $_GET['abouterr'] ?></label>
                                             <?php endif ?>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Giới thiệu dịch vụ</label>
-                                            <textarea name="service" class="form-control" cols="30" rows="7"></textarea>
+                                            <textarea name="service"  class="form-control content_mce" cols="30" rows="7"></textarea>
                                             <?php if (isset($_GET['serviceerr'])) : ?><label for="" class="error"><?= $_GET['serviceerr'] ?></label>
                                             <?php endif ?>
                                         </div>
@@ -117,19 +117,19 @@ checkAdminLoggedIn();
                                         </div>
                                         <div class="form-group">
                                             <label for="">Giới thiệu ảnh</label>
-                                            <textarea name="gallery" class="form-control" cols="30" rows="7"></textarea>
+                                            <textarea name="gallery"   class="form-control content_mce" cols="30" rows="7"></textarea>
                                             <?php if (isset($_GET['galleryerr'])) : ?><label for="" class="error"><?= $_GET['galleryerr'] ?></label>
                                             <?php endif ?>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Giới thiệu blog</label>
-                                            <textarea name="blog" class="form-control" cols="30" rows="7"></textarea>
+                                            <textarea name="blog"   class="form-control content_mce" cols="30" rows="7"></textarea>
                                             <?php if (isset($_GET['blogerr'])) : ?><label for="" class="error"><?= $_GET['blogerr'] ?></label>
                                             <?php endif ?>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Giới thiệu phản hồi</label>
-                                            <textarea name="feedback" class="form-control" cols="30" rows="7"></textarea>
+                                            <textarea name="feedback"   class="form-control content_mce" cols="30" rows="7"></textarea>
                                             <?php if (isset($_GET['feedbackerr'])) : ?><label for="" class="error"><?= $_GET['feedbackerr'] ?></label>
                                             <?php endif ?>
                                         </div>

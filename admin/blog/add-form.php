@@ -75,13 +75,13 @@ $blogCates = queryExecute($getBlogCates, true);
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="">Nội dung ngắn</label>
-                                            <textarea name="short_ct" id="" cols="30" rows="10" class="form-control"></textarea>
+                                            <textarea name="short_ct" cols="30" rows="10" class="form-control content_mce"></textarea>
                                             <?php if (isset($_GET['short_cterr'])) : ?><label for="" class="error"><?= $_GET['short_cterr'] ?></label>
                                             <?php endif ?>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Nội dung chính</label>
-                                            <textarea name="content" id="" cols="30" rows="20" class="form-control"></textarea>
+                                            <textarea name="content" cols="30" rows="20" class="form-control content_mce"></textarea>
                                             <?php if (isset($_GET['contenterr'])) : ?><label for="" class="error"><?= $_GET['contenterr'] ?></label>
                                             <?php endif ?>
                                         </div>

@@ -69,7 +69,58 @@ $blogCate = queryExecute($getBlogCate);
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
-
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-8">
+                            <!-- AREA CHART -->
+                            <div class="card card-danger">
+                                <div class="card-header">
+                                    <h3 class="card-title"><i class="fab fa-first-order-alt"></i>&nbsp;&nbsp;Biểu Đồ Thống Kê Đơn Đặt Phòng</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart">
+                                        <canvas id="areaChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <div class="col-sm-4">
+                            <!-- AREA CHART -->
+                            <div class="card card-info">
+                                <div class="card-header">
+                                    <h3 class="card-title"><i class="far fa-id-card"></i>&nbsp;&nbsp;Biểu Đồ Thống Kê Liên Hệ </h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart">
+                                        <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        
+                        <div class="col-sm-12">
+                            <!-- AREA CHART -->
+                            <div class="card card-warning">
+                                <div class="card-header">
+                                    <h3 class="card-title"><i class="fas fa-dollar-sign"></i>&nbsp;&nbsp;Biểu Đồ Thống Kê Tổng Giá Trị</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart">
+                                        <canvas id="stackedBarChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
@@ -85,7 +136,7 @@ $blogCate = queryExecute($getBlogCate);
                                 <div class="icon">
                                     <i class="fas fa-users"></i>
                                 </div>
-                                <a href="<?= ADMIN_URL. 'users'?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="<?= ADMIN_URL . 'users' ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- contact -->
@@ -99,7 +150,7 @@ $blogCate = queryExecute($getBlogCate);
                                 <div class="icon">
                                     <i class="far fa-id-card"></i>
                                 </div>
-                                <a href="<?= ADMIN_URL. 'contacts'?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="<?= ADMIN_URL . 'contacts' ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- feedback -->
@@ -113,119 +164,7 @@ $blogCate = queryExecute($getBlogCate);
                                 <div class="icon">
                                     <i class="far fa-comment-alt"></i>
                                 </div>
-                                <a href="<?= ADMIN_URL. 'customer_feedback'?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- blog -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-primary">
-                                <div class="inner">
-                                    <h3><?= count($blog) ?></h3>
-                                    <p>Blog</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fab fa-blogger"></i>
-                                </div>
-                                <a href="<?= ADMIN_URL. 'blog'?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- slide -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-success">
-                                <div class="inner">
-                                    <h3><?= count($slides) ?></h3>
-                                    <p>Slides</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fas fa-tv"></i>
-                                </div>
-                                <a href="<?= ADMIN_URL. 'slides'?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- room_gallery -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-success">
-                                <div class="inner">
-                                    <h3><?= count($roomGalleries) ?></h3>
-                                    <p>Bộ Ảnh Phòng</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fas fa-image"></i>
-                                </div>
-                                <a href="<?= ADMIN_URL. 'room_galleries'?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- gallery -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-success">
-                                <div class="inner">
-                                    <h3><?= count($galleries) ?></h3>
-                                    <p>Bộ Ảnh Khách Sạn</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fas fa-images"></i>
-                                </div>
-                                <a href="<?= ADMIN_URL. 'galleries'?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- blog_cate -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-primary">
-                                <div class="inner">
-                                    <h3><?= count($blogCate) ?></h3>
-                                    <p>Thể Loại Blog</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="far fa-list-alt"></i>
-                                </div>
-                                <a href="<?= ADMIN_URL. 'blog_categories'?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- service -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-warning">
-                                <div class="inner">
-                                    <h3><?= count($services) ?></h3>
-                                    <p>Dịch Vụ Khách Sạn</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fas fa-spa"></i>
-                                </div>
-                                <a href="<?= ADMIN_URL. 'services'?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- room -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-warning">
-                                <div class="inner">
-                                    <h3><?= count($rooms) ?></h3>
-                                    <p>Loại Phòng</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fas fa-hotel"></i>
-                                </div>
-                                <a href="<?= ADMIN_URL. 'room_types'?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- room_service -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-warning">
-                                <div class="inner">
-                                    <h3><?= count($roomServices) ?></h3>
-                                    <p>Dịch Vụ Phòng</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fas fa-concierge-bell"></i>
-                                </div>
-                                <a href="<?= ADMIN_URL. 'room_services'?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="<?= ADMIN_URL . 'customer_feedback' ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- booking -->
@@ -239,7 +178,49 @@ $blogCate = queryExecute($getBlogCate);
                                 <div class="icon">
                                     <i class="fab fa-first-order-alt"></i>
                                 </div>
-                                <a href="<?= ADMIN_URL. 'booking'?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="<?= ADMIN_URL . 'booking' ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- slide -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-success">
+                                <div class="inner">
+                                    <h3><?= count($slides) ?></h3>
+                                    <p>Slides</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-tv"></i>
+                                </div>
+                                <a href="<?= ADMIN_URL . 'slides' ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- room_gallery -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-success">
+                                <div class="inner">
+                                    <h3><?= count($roomGalleries) ?></h3>
+                                    <p>Bộ Ảnh Phòng</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                                <a href="<?= ADMIN_URL . 'room_galleries' ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- gallery -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-success">
+                                <div class="inner">
+                                    <h3><?= count($galleries) ?></h3>
+                                    <p>Bộ Ảnh Khách Sạn</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-images"></i>
+                                </div>
+                                <a href="<?= ADMIN_URL . 'galleries' ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- web_settings -->
@@ -253,7 +234,77 @@ $blogCate = queryExecute($getBlogCate);
                                 <div class="icon">
                                     <i class="fas fa-cog"></i>
                                 </div>
-                                <a href="<?= ADMIN_URL. 'web_settings'?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="<?= ADMIN_URL . 'web_settings' ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- service -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-warning">
+                                <div class="inner">
+                                    <h3><?= count($services) ?></h3>
+                                    <p>Dịch Vụ Khách Sạn</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-spa"></i>
+                                </div>
+                                <a href="<?= ADMIN_URL . 'services' ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- room -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-warning">
+                                <div class="inner">
+                                    <h3><?= count($rooms) ?></h3>
+                                    <p>Loại Phòng</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-hotel"></i>
+                                </div>
+                                <a href="<?= ADMIN_URL . 'room_types' ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- room_service -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-warning">
+                                <div class="inner">
+                                    <h3><?= count($roomServices) ?></h3>
+                                    <p>Dịch Vụ Phòng</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-concierge-bell"></i>
+                                </div>
+                                <a href="<?= ADMIN_URL . 'room_services' ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- blog -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-primary">
+                                <div class="inner">
+                                    <h3><?= count($blog) ?></h3>
+                                    <p>Blog</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fab fa-blogger"></i>
+                                </div>
+                                <a href="<?= ADMIN_URL . 'blog' ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- blog_cate -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-primary">
+                                <div class="inner">
+                                    <h3><?= count($blogCate) ?></h3>
+                                    <p>Thể Loại Blog</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="far fa-list-alt"></i>
+                                </div>
+                                <a href="<?= ADMIN_URL . 'blog_categories' ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div><!-- /.container-fluid -->
@@ -271,6 +322,7 @@ $blogCate = queryExecute($getBlogCate);
     </div>
     <!-- ./wrapper -->
     <?php include_once '../_share/scripts.php' ?>
+    <?php include_once '../_share/chartjs.php'?>
 </body>
 
 </html>

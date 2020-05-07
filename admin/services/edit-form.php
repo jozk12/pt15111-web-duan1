@@ -57,7 +57,7 @@ if (!$service) {
                                         </div>
                                         <div class="form-group">
                                             <label for="">Mô tả chi tiết</label>
-                                            <textarea name="desc" id="" cols="30" rows="15" class="form-control"><?=$service['description']?></textarea>
+                                            <textarea name="desc" id="" cols="30" rows="15" class="form-control content_mce"><?=$service['description']?></textarea>
                                             <?php if (isset($_GET['descerr'])) : ?><label for="" class="error"><?= $_GET['descerr'] ?></label>
                                             <?php endif ?>
                                         </div>
@@ -90,7 +90,7 @@ if (!$service) {
                                         </div>
                                         <div class="form-group">
                                             <label for="">Mô tả ngắn</label>
-                                            <textarea name="short_desc" id="" cols="30" rows="8" class="form-control"><?=$service['short_desc']?></textarea>
+                                            <textarea name="short_desc" id="" cols="30" rows="8" class="form-control content_mce"><?=$service['short_desc']?></textarea>
                                             <?php if (isset($_GET['short_descerr'])) : ?><label for="" class="error"><?= $_GET['short_descerr'] ?></label>
                                             <?php endif ?>
                                         </div>

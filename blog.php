@@ -2,6 +2,7 @@
 session_start();
 require_once "./config/utils.php";
 $keyword = isset($_GET['keyword']) == true ? $_GET['keyword'] : "";
+$cate = isset($_GET['cate']) == true ? $_GET['cate']:"";
 
 $getWebSettingQuery = "select * from web_settings where status = 1";
 $webSetting = queryExecute($getWebSettingQuery, false);
@@ -13,6 +14,7 @@ if (isset($_GET['page'])) {
     $page = 1;
 }
 $offset = ($page-1) * $total_blog_one_page;
+
 $getBlogQuery = "select b.*,
                 u.name author 
                 from blog b
@@ -36,6 +38,7 @@ for ($i = 0; $i < count($blogs); $i++) {
     $cates = queryExecute($getCateQuery, true);
     $blogs[$i]['blog_cate'] = $cates;
 }
+
 $getAllBlog = "select * from blog";
 $allBlog = queryExecute($getAllBlog, true);
 $total_rows = count($allBlog);
@@ -89,7 +92,7 @@ $blogRec = queryExecute($getBlogRecentQuery, true);
                                         </div>
                                     </div>
                                     <div class="item-desc">
-                                        <h2><a href="blog-single.php"><?= $blog['title'] ?></a></h2>
+                                        <h2><a href="blog-single.php?id=<?= $blog['id'] ?>"><?= $blog['title'] ?></a></h2>
                                         <h5>BY <a href="#"><?= $blog['author'] ?></a> <i class="fa fa-clock-o"></i><?= $blog['create_at'] ?><i class="fa fa-bars"></i>
                                             <?php foreach ($blog['blog_cate'] as $bCate) : ?>
                                                 <a href="blog.php"><?= $bCate['name'] ?>&nbsp &nbsp</a>
@@ -126,8 +129,8 @@ $blogRec = queryExecute($getBlogRecentQuery, true);
                             <!-- Sidebar Search -->
                             <div class="widget sidebar-search">
                                 <h5>SEARCH</h5>
-                                <form action="" method="get">
-                                    <input type="text" placeholder="Enter title or author" value="<?= $keyword?>" required name="keyword">
+                                <form action="blog.php" method="get">
+                                    <input type="text" placeholder="Enter title or author" value="<?= $keyword?>" name="keyword">
                                     <button type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
@@ -138,7 +141,7 @@ $blogRec = queryExecute($getBlogRecentQuery, true);
                                 <nav>
                                     <ul>
                                         <?php foreach ($allCates as $cate) : ?>
-                                            <li><a href="#"><?= $cate['name'] ?></a></li>
+                                            <li><a href="blog.php"><?= $cate['name'] ?></a></li>
                                         <?php endforeach ?>
                                     </ul>
                                 </nav>

@@ -106,7 +106,7 @@ $room['room_sv'] = $services;
                                                 <div class="col-md-12">
                                                     <i class="fa fa-calendar-plus-o"></i>
                                                     <input type="text" name="id" hidden id="" value="<?= $room['id'] ?>">
-                                                    <input type="text" name="checkin" placeholder="CHECK IN" class="datepicker" value=<?= $checkin ?>>
+                                                    <input type="text" autocomplete="off" name="checkin" placeholder="CHECK IN" class="datepicker" value=<?= $checkin ?>>
                                                     <?php if (isset($_GET['checkinerr'])) : ?>
                                                         <span class="text-danger"><?= $_GET['checkinerr'] ?></span>
                                                     <?php endif ?>
@@ -115,7 +115,7 @@ $room['room_sv'] = $services;
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <i class="fa fa-calendar-plus-o"></i>
-                                                    <input type="text" name="checkout" placeholder="CHECK OUT" class="datepicker" value="<?= $checkout ?>">
+                                                    <input type="text" autocomplete="off" name="checkout" placeholder="CHECK OUT" class="datepicker" value="<?= $checkout ?>">
                                                     <?php if (isset($_GET['checkouterr'])) : ?>
                                                         <span class="text-danger"><?= $_GET['checkouterr'] ?></span>
                                                     <?php endif ?>

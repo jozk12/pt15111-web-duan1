@@ -84,10 +84,10 @@ $total_page = ceil($total_room/$total_room_one_page)
                             </div>
                             <div class="item-price">
                                 <div class="price-inner">
-                                    <h3><?= $room['price'] ?> VNĐ</h3>
+                                    <h3><?= number_format($room['price'],0,",",".") ?> VNĐ</h3>
                                     <h5>PER NIGHT</h5>
                                     <h5><?= $room['adults']?> Người lớn & <?= $room['children']?> Trẻ em</h5>
-                                    <a href="rooms-detail.php?id=<?= $room['id'] ?>&&checkin=<?=$checkin?>&&checkout=<?=$checkout?>" class="btn">ROOM DETAIL</a>
+                                    <a href="rooms-detail.php?id=<?= $room['id'] ?>&&checkin=<?=$checkin?>&&checkout=<?=$checkout?>" class="btn">BOOK NOW</a>
                                 </div>
                             </div>
                         </div>

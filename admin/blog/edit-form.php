@@ -106,13 +106,13 @@ $allCates = queryExecute($getCategories, true);
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="">Mô tả ngắn</label>
-                                            <textarea name="short_ct" id="" cols="30" rows="10" class="form-control"><?= $blog['short_ct'] ?></textarea>
+                                            <textarea name="short_ct" id="" cols="30" rows="10" class="form-control content_mce"><?= $blog['short_ct'] ?></textarea>
                                             <?php if (isset($_GET['short_cterr'])) : ?><label for="" class="error"><?= $_GET['short_cterr'] ?></label>
                                             <?php endif ?>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Mô tả chính</label>
-                                            <textarea name="content" id="" cols="30" rows="20" class="form-control"><?= $blog['content'] ?></textarea>
+                                            <textarea name="content" id="" cols="30" rows="20" class="form-control content_mce"><?= $blog['content'] ?></textarea>
                                             <?php if (isset($_GET['contenterr'])) : ?><label for="" class="error"><?= $_GET['contenterr'] ?></label>
                                             <?php endif ?>
                                         </div>

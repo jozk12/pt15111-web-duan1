@@ -63,6 +63,10 @@ $roomSers = queryExecute($getRoomSerives, true);
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label for="">Bộ ảnh phòng</label><br>
+                                            <a href="<?= ADMIN_URL . 'room_galleries/add-form.php' ?>" target="_blank" class="btn btn-primary btn-m"><i class="fas fa-image"></i> Thêm bộ ảnh phòng</a>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="">Giá</label>
                                             <input type="text" name="price" class="form-control">
                                             <?php if (isset($_GET['priceerr'])) : ?><label for="" class="error"><?= $_GET['priceerr'] ?></label>
@@ -96,13 +100,13 @@ $roomSers = queryExecute($getRoomSerives, true);
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="">Mô tả ngắn</label>
-                                            <textarea name="short_desc" id="" cols="30" rows="10" class="form-control"></textarea>
+                                            <textarea name="short_desc" id="" cols="30" rows="10" class="form-control content_mce"></textarea>
                                             <?php if (isset($_GET['short_descerr'])) : ?><label for="" class="error"><?= $_GET['short_descerr'] ?></label>
                                             <?php endif ?>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Mô tả chi tiết</label>
-                                            <textarea name="desc" id="" cols="30" rows="20" class="form-control"></textarea>
+                                            <textarea name="desc" id="" cols="30" rows="20" class="form-control content_mce"></textarea>
                                             <?php if (isset($_GET['descerr'])) : ?><label for="" class="error"><?= $_GET['descerr'] ?></label>
                                             <?php endif ?>
                                         </div>

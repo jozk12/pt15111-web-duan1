@@ -79,8 +79,10 @@ $contacts = queryExecute($getContact, true);
                                                     <td><?= $contact['replyer'] ?></td>   
                                                 <?php endif ?>
                                                 <td>
-                                                    <?php if (!isset($_GET['reply'])) : ?>
-                                                        <a href="<?= ADMIN_URL . 'contacts/answer-form.php?id=' . $contact['id'] ?>" class="btn btn-sm btn-info"><i class="far fa-comment-dots"></i></a>
+                                                    <?php if (isset($_GET['reply'])) : ?>
+                                                        <a href="<?= ADMIN_URL . 'contacts/answer-form.php?id=' . $contact['id'].'&&reply' ?>" class="btn btn-sm btn-info"><i class="far fa-comment-dots"></i></a>
+                                                    <?php else:?>
+                                                        <a href="<?= ADMIN_URL . 'contacts/answer-form.php?id=' . $contact['id']?>" class="btn btn-sm btn-info"><i class="far fa-comment-dots"></i></a>
                                                     <?php endif ?>
                                                     <a href="<?= ADMIN_URL . 'contacts/remove.php?id=' . $contact['id'] ?>" class="btn-remove btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                                                 </td>

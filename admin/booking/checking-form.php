@@ -54,35 +54,35 @@ if(!$book){
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="">Tên người đặt</label>
-                                            <input type="text" name="name" class="form-control" value="<?= $book['name'] ?>" >
+                                            <input type="text" readonly name="name" class="form-control" value="<?= $book['name'] ?>" >
                                         </div>
                                         <div class="form-group">
                                             <label for="">Số điện thoại</label>
-                                            <input type="text" name="phone" class="form-control" value="<?= $book['phone_number'] ?>" >
+                                            <input type="text" readonly name="phone" class="form-control" value="<?= $book['phone_number'] ?>" >
                                         </div>
                                         <div class="form-group">
                                             <label for="">Email</label>
-                                            <input type="text" name="email" class="form-control" value="<?= $book['email'] ?>" >
+                                            <input type="text" readonly name="email" class="form-control" value="<?= $book['email'] ?>" >
                                         </div>
                                         <div class="form-group">
                                             <label for="">Ngày đến</label>
-                                            <input type="date" name="checkin_date" class="form-control" value="<?= $book['checkin_date'] ?>" >
+                                            <input type="date" readonly name="checkin_date" class="form-control" value="<?= $book['checkin_date'] ?>" >
                                         </div>
                                         <div class="form-group">
                                             <label for="">Ngày rời</label>
-                                            <input type="date" name="checkout_date" class="form-control" value="<?= $book['checkout_date'] ?>" >
+                                            <input type="date" readonly name="checkout_date" class="form-control" value="<?= $book['checkout_date'] ?>" >
                                         </div>
                                         <div class="form-group">
                                             <label for="">Số người lớn</label>
-                                            <input type="text" name="adults" class="form-control" value="<?= $book['adults'] ?>" >
+                                            <input type="text" readonly name="adults" class="form-control" value="<?= $book['adults'] ?>" >
                                         </div>
                                         <div class="form-group">
                                             <label for="">Số trẻ em</label>
-                                            <input type="text" name="children" class="form-control" value="<?= $book['children'] ?>" >
+                                            <input type="text" readonly name="children" class="form-control" value="<?= $book['children'] ?>" >
                                         </div>
                                         <div class="form-group">
                                             <label for="">Loại phòng</label>
-                                            <input type="text" name="roomName" class="form-control" value="<?= $book['roomName'] ?>" >
+                                            <input type="text" readonly name="roomName" class="form-control" value="<?= $book['roomName'] ?>" >
                                         </div>
                                     </div>
                                 </div>
@@ -92,11 +92,11 @@ if(!$book){
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="">Yêu cầu đặc biệt</label>
-                                            <textarea name="request" class="form-control" id="" cols="30" rows="6"><?= $book['request'] ?></textarea>
+                                            <textarea readonly name="request" class="form-control" id="" cols="30" rows="6"><?= $book['request'] ?></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Tổng đơn giá</label>
-                                            <input type="text" name="total" id="" class="form-control" value="<?= $book['total_price']?> VNĐ">
+                                            <input  readonly type="text" name="total" id="" class="form-control" value="<?= number_format($book['total_price'],0,",",".")?> VNĐ">
                                         </div>
                                     </div>
                                 </div>
@@ -111,7 +111,7 @@ if(!$book){
                                     </div>
                                     <div class="form-group">
                                         <label for="">Lời nhắn</label>
-                                        <textarea name="reply" class="form-control" id="" cols="30" rows="8"></textarea>
+                                        <textarea name="reply" class="form-control content_mce" id="" cols="30" rows="8"></textarea>
                                         <?php if(isset($_GET['replyerr'])):?>
                                             <?=$_GET['replyerr']?>
                                         <?php endif?>

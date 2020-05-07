@@ -121,7 +121,7 @@ if ($room == "") {
                                         </div>
                                         <div class="room-desc">
                                             <h3><a href="rooms-detail.php?id=<?= $_SESSION[BOOK]['id']?>"><?= $room['name'] ?></a></h3>
-                                            <h4><?= $room['price'] ?> VNĐ <small>PER NIGHT</small></h4>
+                                            <h4><?= number_format($room['price'],0,",",".")?> VNĐ <small>PER NIGHT</small></h4>
                                         </div>
                                     </div>
                                     <div class="detail-info">
@@ -148,7 +148,7 @@ if ($room == "") {
                                             </li>
                                             <li class="total">
                                                 <label>TOTAL PRICE</label>
-                                                <p><?= $total_price?> VNĐ</p>
+                                                <p><?= number_format($total_price,0,",",".")?> VNĐ</p>
                                             </li>
                                         </ul>
                                     </div>

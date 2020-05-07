@@ -22,6 +22,14 @@ $feedbacks = queryExecute($getFeedbackQuery, true);
 
 $getWebSettingQuery = "select * from web_settings where status = 1";
 $webSetting = queryExecute($getWebSettingQuery, false);
+
+$getQuanChild = "select children from room_types where status = 1 GROUP BY children";
+$qChild = queryExecute($getQuanChild, true);
+
+$getQuanAdult = "select adults from room_types where status = 1 GROUP BY adults";
+$qAdult = queryExecute($getQuanAdult, true);
+
+setlocale(LC_MONETARY, 'vi_VN');
 ?>
 
 <!DOCTYPE html>
@@ -73,32 +81,28 @@ $webSetting = queryExecute($getWebSettingQuery, false);
                                 <ul>
                                     <li>
                                         <i class="fa fa-calendar-plus-o"></i>
-                                        <input type="text" name="checkin" placeholder="CHECK IN" class="datepicker">
+                                        <input autocomplete="off" type="text" name="checkin" placeholder="CHECK IN" class="datepicker">
                                     </li>
                                     <li>
                                         <i class="fa fa-calendar-plus-o"></i>
-                                        <input type="text" name="checkout" placeholder="CHECK OUT" class="datepicker">
+                                        <input autocomplete="off" type="text" name="checkout" placeholder="CHECK OUT" class="datepicker">
                                     </li>
                                     <li>
                                         <i class="fa fa-caret-down"></i>
                                         <select name="adults">
                                             <option value="">Người lớn</option>
-                                            <option value="1">1 NGƯỜI</option>
-                                            <option value="2">2 NGƯỜI</option>
-                                            <option value="2">3 NGƯỜI</option>
-                                            <option value="2">4 NGƯỜI</option>
-                                            <option value="2">5 NGƯỜI</option>
+                                            <?php foreach ($qAdult as $qA) : ?>
+                                                <option value="<?=$qA['adults']?>"><?=$qA['adults']?> NGƯỜI</option>
+                                            <?php endforeach ?>
                                         </select>
                                     </li>
                                     <li>
                                         <i class="fa fa-caret-down"></i>
                                         <select name="children">
                                             <option value="">Trẻ con</option>
-                                            <option value="1">1 NGƯỜI</option>
-                                            <option value="2">2 NGƯỜI</option>
-                                            <option value="2">3 NGƯỜI</option>
-                                            <option value="2">4 NGƯỜI</option>
-                                            <option value="2">5 NGƯỜI</option>
+                                            <?php foreach ($qChild as $qC) : ?>
+                                                <option value="<?=$qC['children']?>"><?=$qC['children']?> NGƯỜI</option>
+                                            <?php endforeach ?>
                                         </select>
                                     </li>
                                     <li>
@@ -128,7 +132,7 @@ $webSetting = queryExecute($getWebSettingQuery, false);
                                     </div>
                                     <div class="item-desc">
                                         <h2><a href="rooms-detail.php?id=<?= $room['id'] ?>"><?= $room['name'] ?></a></h2>
-                                        <h3><?= $room['price'] ?> VNĐ</h3>
+                                        <h3><?= number_format($room['price'], 0, ",", ".") ?> VNĐ</h3>
                                         <p><?= $room['short_desc'] ?></p>
                                     </div>
                                 </div>
@@ -235,7 +239,7 @@ $webSetting = queryExecute($getWebSettingQuery, false);
                         <?php foreach ($blogs as $blog) : ?>
                             <div class="blog-item">
                                 <div class="item-media">
-                                    <div class="item-date"><b><?= date('d',strtotime($blog['create_at'])) ?></b><?= date('D',strtotime($blog['create_at'])) ?></div>
+                                    <div class="item-date"><b><?= date('d', strtotime($blog['create_at'])) ?></b><?= date('D', strtotime($blog['create_at'])) ?></div>
                                     <div class="media-photo">
                                         <a href="blog-single.php?id=<?= $blog['id'] ?>" data-background="<?= BASE_URL . $blog['image'] ?>"></a>
                                     </div>
